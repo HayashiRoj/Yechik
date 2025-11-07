@@ -1,2 +1,1 @@
-# Yechik
-Yechik studio's home page
+#md懒得写

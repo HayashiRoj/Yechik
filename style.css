@@ -1,0 +1,210 @@
+@font-face{font-family:'Noto Sans SC';src:url('./font/noto_sans/NotoSansSC-Thin.ttf') format('truetype');font-weight:100}
+@font-face{font-family:'Noto Sans SC';src:url('./font/noto_sans/NotoSansSC-Light.ttf') format('truetype');font-weight:200}
+@font-face{font-family:'Noto Sans SC';src:url('./font/noto_sans/NotoSansSC-Regular.ttf') format('truetype');font-weight:300}
+@font-face{font-family:'Noto Sans SC';src:url('./font/noto_sans/NotoSansSC-Medium.ttf') format('truetype');font-weight:400}
+@font-face{font-family:'Noto Sans SC';src:url('./font/noto_sans/NotoSansSC-Bold.ttf') format('truetype');font-weight:500}
+@font-face{font-family:'Noto Sans SC';src:url('./font/noto_sans/NotoSansSC-Black.ttf') format('truetype');font-weight:600}
+*{
+    font-family: Noto Sans SC;
+    color: #FFFFFF;
+}
+a, a:visited, a:hover, a:active {
+    text-decoration: none;
+	-webkit-tap-highlight-color: transparent;
+	cursor: pointer;
+}
+button, button:visited, button:hover, button:active {
+    text-decoration: none;
+	-webkit-tap-highlight-color: transparent;
+	cursor: pointer;
+}
+
+body{
+    position: static;
+    padding-top: 70px;
+    background-color: #000000;
+    z-index: 1;
+}
+
+div.card {
+    position: static;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: fill;
+    padding: 10px;
+    background-color: #66666666;
+    border-radius: 15px;
+    transition: all 0.5s ease;
+	z-index: 1;
+}
+div.topDock {
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    top: 9px;
+    left: 8px;
+    right: 8px;
+    position: fixed;
+    z-index: 2;
+    display: flex;
+    justify-content: space-between;
+    height: 32px;
+	width: fill;
+    padding: 10px;
+    background-color: #66666666;
+    border-radius: 15px;
+    transition: all 0.5s ease;
+}
+div.topDock.on {
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    height: 200px;
+    background-color: #66666688;
+}
+div.topDockContent {
+    visibility: hidden;
+    opacity: 0;
+    position: absolute;
+    z-index: 3;
+    transition: all 0.5s ease;
+    left: 50px;
+    top: 8px;
+    right: 50px;
+    bottom: 8px;
+}
+div.topDockContent.on {
+    visibility: visible;
+    opacity: 1;
+}
+div.fList {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    left: -40px;
+    right: -40px;
+    bottom: -3px;
+    top: 40px;
+    position: absolute;
+}
+div.cover {
+    visibility: hidden;
+    position: fixed;
+    height: 200%;
+    width: 100%;
+    top: -50%;
+    left: 0px;
+    right: 0px;
+    bottom: -50%;
+    transition: all 0.5s ease;
+}
+div.cover.on {
+    visibility: visible;
+    backdrop-filter: blur(1px);
+    -webkit-backdrop-filter: blur(1px);
+    background-color: #00000066;
+}
+div.rowOfLinks {
+    display: inline-block
+    gap: 10px;
+    margin-bottom: -4px;
+}
+
+button.list{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 30px;
+    width: 32px;
+    margin: 1px;
+    border: none;
+    background: none;
+    padding: 0;
+}
+
+a.listLink {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #00000000;
+    height: 50px;
+    width: 100%;
+    margin: 5px;
+    border-radius: 6px;
+    transition: all 0.3s ease;
+}
+a.listLink:active {
+    background: #00000088;
+}
+a.rowLink {
+    display: flex;
+    background-color: #00000033;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 20px;
+    padding: 10px;
+    width: fill;
+    height: auto;
+    border-radius: 6px;
+    transition: all 0.3s ease;
+}
+a.rowLink:active {
+    background: #00000088;
+}
+
+img.poster {
+    width: 100%;
+    height: auto;
+    border-radius: 6px;
+}
+img.logoButton {
+    height: 32px;
+    width: 32px;
+}
+
+span.lineA, span.lineB, span.lineC {
+    display: block;
+    height: 4px;
+    width: 32px;
+    background-color: #FFFFFF;
+    border-radius: 2px;
+    transition: all 0.5s ease;
+}
+span.logoFont {
+    font-size: 50px;
+    font-weight: 900;
+    display: block;
+    text-align: center;
+}
+span.studio {
+    font-size: 30px;
+    font-weight: 300;
+    display: block;
+    text-align: center;
+}
+span.dockTopic {
+    display: flex;
+    font-size: 20px;
+    font-weight: 300;
+    justify-content: center;
+}
+
+button.list.on span.lineA {
+    transform: rotate(45deg) translate(9px, 9px);
+}
+button.list.on span.lineB {
+    opacity: 0;
+}
+button.list.on span.lineC {
+    transform: rotate(-45deg) translate(9px, -9px);
+}
+button.list.on div.topDock {
+    height: 50px;
+}
+
+footer {
+    text-align: center;
+    margin: 8px;
+}
+footer a {
+    color: #888888;
+}
